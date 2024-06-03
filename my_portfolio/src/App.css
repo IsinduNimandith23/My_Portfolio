@@ -3,6 +3,9 @@
     margin: 0 auto;
     position: relative;
 }
+.material-symbols-outlined {
+    font-family: 'Material Icons', sans-serif;
+}
 
 @media (max-width: 1300px) {
     .container {
