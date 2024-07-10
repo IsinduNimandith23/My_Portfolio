@@ -46,3 +46,35 @@ export const SKILLS = [
     },
 ];
 
+export const WORK_EXPERIENCE = [
+    {
+        title: "Software Developer",
+        date: "June 2020 - Present",
+        responsibilities: [
+            "Developed and maintained web applications using ReactJS.",
+            "Worked with the team to design and implement new features.",
+            "Collaborated with the design team to create user-friendly interfaces.",
+        ],
+        
+    },
+    {
+        title: "Software Developer",
+        date: "June 2020 - Present",
+        responsibilities: [
+            "Developed and maintained web applications using ReactJS.",
+            "Worked with the team to design and implement new features.",
+            "Collaborated with the design team to create user-friendly interfaces.",
+        ],
+        
+    },
+    {
+        title: "Software Developer",
+        date: "June 2020 - Present",
+        responsibilities: [
+            "Developed and maintained web applications using ReactJS.",
+            "Worked with the team to design and implement new features.",
+            "Collaborated with the design team to create user-friendly interfaces.",
+        ],
+        
+    },
+];
