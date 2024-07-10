@@ -1,21 +1,26 @@
-import './ContactInfoCard.css'
-import PropTypes from 'prop-types'
+import "./ContactInfoCard.css";
+import PropTypes from "prop-types";
 
-const ContactInfoCard = ({ iconUrl, text }) => {
+const ContactInfoCard = ({ iconUrl, text, link }) => {
   return (
-    <div className='contact-details-card'>
-        <div className='icon'>
-            <img src={iconUrl} alt={text} />
-        </div>
-
-        <p>{text}</p>
-    </div>
-  )
-}
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-details-card"
+    >
+      <div className="icon">
+        <img src={iconUrl} alt={text} />
+      </div>
+      <p>{text}</p>
+    </a>
+  );
+};
 
 ContactInfoCard.propTypes = {
-    iconUrl: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-}
+  iconUrl: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};
 
-export default ContactInfoCard
+export default ContactInfoCard;

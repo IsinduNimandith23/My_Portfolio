@@ -1,13 +1,20 @@
 import { useState } from "react";
 import "./Navbar.css";
 import MobileNav from "./MobileNav/MobileNav";
-// import { Mail } from "@mui/icons-material";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setOpenMenu(false);
   };
 
   return (
@@ -18,22 +25,31 @@ const Navbar = () => {
           <img className="logo" src="./assets/images/logo.png" alt="logo" />
           <ul>
             <li>
-              <a className="menu-item" href="#">
+              <a className="menu-item" onClick={() => scrollToSection("home")}>
                 Home
               </a>
             </li>
             <li>
-              <a className="menu-item" href="#">
+              <a
+                className="menu-item"
+                onClick={() => scrollToSection("skills")}
+              >
                 Skills
               </a>
             </li>
             <li>
-              <a className="menu-item" href="#">
-                Work Experience
+              <a
+                className="menu-item"
+                onClick={() => scrollToSection("projects")}
+              >
+                Projects
               </a>
             </li>
             <li>
-              <a className="menu-item" href="#">
+              <a
+                className="menu-item"
+                onClick={() => scrollToSection("contact")}
+              >
                 Contact Me
               </a>
             </li>
@@ -41,13 +57,16 @@ const Navbar = () => {
           <button
             className="contact-btn"
             onClick={() => {
-                const email = 'isindunimandith23@gmail.com';
-                const subject = 'Hire Me';
-                const body = 'Hello, I would like to hire you for a project. Please get back to me with more information.';
-                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject || '')}&body=${encodeURIComponent(body || '')}`;
-                window.location.href = mailtoLink;
+              const email = "isindunimandith23@gmail.com";
+              const subject = "Hire Me";
+              const body =
+                "Hello, I would like to hire you for a project. Please get back to me with more information.";
+              const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+                subject || ""
+              )}&body=${encodeURIComponent(body || "")}`;
+              window.location.href = mailtoLink;
             }}
-            >
+          >
             Hire Me
           </button>
           <button className="menu-btn" onClick={toggleMenu}>

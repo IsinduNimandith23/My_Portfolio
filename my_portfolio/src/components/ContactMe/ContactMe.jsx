@@ -4,18 +4,20 @@ import ContactForm from "./ContactForm/ContactForm";
 
 const ContactMe = () => {
   return (
-    <section className="contact-container">
+    <section id="contactme" className="contact-container">
       <h5>Contact Me</h5>
 
       <div className="contact-content">
         <div style={{ flex: 1 }}>
           <ContactInfoCard
-            iconUrl="https://img.icons8.com/ios/452/phone.png"
-            text="isindunimandith23@gmail.com"
+            iconUrl="./assets/images/linkedin.png"
+            text="LinkedIn"
+            link="https://www.linkedin.com/in/isindu-nimandith-432228299/"
           />
           <ContactInfoCard
-            iconUrl="https://img.icons8.com/ios/452/phone.png"
-            text="https://github.com/IsinduNimandith23"
+            iconUrl="./assets/images/github.png"
+            text="Github"
+            link="https://github.com/IsinduNimandith23"
           />
         </div>
         <div style={{ flex: 1 }}>
